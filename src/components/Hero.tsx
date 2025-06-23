@@ -5,7 +5,7 @@ import React from "react";
 function Hero() {
   return (
     <section className="h-without-header flex flex-col w-full">
-      <div className="grid gap-8 w-full flex-1 px-20 pt-32 pb-24 grid-cols-4">
+      <div className="grid gap-6 w-full flex-1 pt-32 pb-24 grid-cols-4">
         {/* Left section */}
         <section className="flex h-full items-start justify-start">
           <p className="font-myFont leading-6 text-lg">{heroContent.left}</p>
