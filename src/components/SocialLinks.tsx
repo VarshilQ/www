@@ -15,28 +15,40 @@ function SocialLinks() {
         target="_blank"
         rel="noopener noreferrer"
       >
-        <RiTwitterFill size={16} className="cursor-pointer transition" />
+        <RiTwitterFill
+          size={16}
+          className="cursor-pointer hover:text-primary transition"
+        />
       </a>
       <a
         href={socialMediaLinks.linkedin}
         target="_blank"
         rel="noopener noreferrer"
       >
-        <RiLinkedinBoxFill size={16} className="cursor-pointer transition" />
+        <RiLinkedinBoxFill
+          size={16}
+          className="cursor-pointer hover:text-primary transition"
+        />
       </a>
       <a
         href={socialMediaLinks.github}
         target="_blank"
         rel="noopener noreferrer"
       >
-        <RiGithubFill size={16} className="cursor-pointer transition" />
+        <RiGithubFill
+          size={16}
+          className="cursor-pointer hover:text-primary transition"
+        />
       </a>
       <a
         href={socialMediaLinks.facebook}
         target="_blank"
         rel="noopener noreferrer"
       >
-        <RiFacebookCircleFill size={16} className="cursor-pointer transition" />
+        <RiFacebookCircleFill
+          size={16}
+          className="cursor-pointer hover:text-primary transition"
+        />
       </a>
     </div>
   );

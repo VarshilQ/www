@@ -22,7 +22,7 @@ function Experience() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.5 }}
-          className="w-full my-16 grid items-center gap-12 grid-cols-3 md:grid-cols-5 justify-items-center"
+          className="w-full my-16 md:my-24 grid items-center gap-12 grid-cols-3 md:grid-cols-5 justify-items-center"
         >
           <RiAppleFill size={64} />
           <RiMetaLine size={64} />
