@@ -3,36 +3,38 @@ import FunTrivia from "@/components/FunTrivia";
 import Hero from "@/components/Hero";
 import Meet from "@/components/Meet";
 import Offering from "@/components/Offering";
-import Work from "@/components/Work";
+import Experience from "@/components/Experience";
 import Image from "next/image";
 
 export default function HomePage() {
-	return (
-		<main>
-			<section className="max-w-7xl mx-auto">
-				{/* Below header section */}
-				<div className="w-full h-20 bg-background" />
+  return (
+    <main>
+      <div className="w-full h-20 bg-background" />
+      <section className="max-w-7xl space-y-20 mx-auto">
+        {/* Below header section */}
 
-				{/* Hero section */}
-				<Hero />
+        {/* Hero section */}
+        <Hero />
 
-				{/* Work section */}
-				<Work />
-			</section>
+        {/* Experience section */}
+        <Experience />
+      </section>
 
-			{/* Offering section */}
-			<Offering />
+      <section className="my-20">
+        {/* Offering section */}
+        <Offering />
+      </section>
 
-			<section className="max-w-7xl mx-auto">
-				{/* Meet section */}
-				<Meet />
+      <section className="max-w-7xl space-y-20 mx-auto">
+        {/* Meet section */}
+        <Meet />
 
-				{/* Meet section */}
-				<Feedback />
+        {/* Meet section */}
+        <Feedback />
 
-				{/* Trivia section */}
-				<FunTrivia />
-			</section>
-		</main>
-	);
+        {/* Trivia section */}
+        <FunTrivia />
+      </section>
+    </main>
+  );
 }

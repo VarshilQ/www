@@ -15,7 +15,7 @@ export const socialMediaLinks = {
 
 export const heroContent = {
 	left: "Will Paterson Design Studio is a leading boutique studio for the creation of best-in-class logo design and brand identity.",
-	center: "Software Architecture",
+	center: "Software Draftsperson",
 	right: "We educate people about their brand stories, identity, design and business. Through creative excellence, we transform brands into sustainable success stories that inspire customers and employees alike.",
 	ctaLabel: "Let's Talk",
 };
