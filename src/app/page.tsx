@@ -17,20 +17,22 @@ export const metadata: Metadata = {
 export default function HomePage() {
   return (
     <main>
-      <section className="max-w-7xl max-lg:px-6 space-y-20 mx-auto">
+      <section className="max-w-7xl space-y-12 lg:space-y-20 mx-auto">
         {/* Hero section */}
         <Hero />
 
-        {/* Experience section */}
-        <Experience />
+        <section className="w-full max-lg:px-6">
+          {/* Experience section */}
+          <Experience />
+        </section>
       </section>
 
-      <section className="my-20">
+      <section className="my-12 lg:my-20">
         {/* Offering section */}
         <Offering />
       </section>
 
-      <section className="max-w-7xl max-lg:px-6 mb-20 space-y-20 mx-auto">
+      <section className="max-w-7xl max-lg:px-6 mb-12 lg:mb-20 space-y-20 mx-auto">
         {/* Meet section */}
         <Meet />
 

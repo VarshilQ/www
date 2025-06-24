@@ -6,7 +6,7 @@ import * as motion from "motion/react-client";
 
 function Hero() {
   return (
-    <section className="relative min-h-without-header lg:h-without-header overflow-hidden flex flex-col w-full">
+    <section className="max-lg:px-6 relative min-h-without-header lg:h-without-header overflow-hidden flex flex-col w-full">
       <img
         alt={person.name}
         className="absolute aspect-square -z-10 h-full inset-y-0 object-cover left-0 md:left-16"

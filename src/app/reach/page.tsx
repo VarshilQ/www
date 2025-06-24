@@ -14,7 +14,7 @@ export const metadata: Metadata = {
 function ReachPage() {
   return (
     <main>
-      <section className="my-20 space-y-16 w-full max-w-7xl mx-auto">
+      <section className="my-12 lg:my-20 space-y-16 max-lg:px-6 w-full max-w-7xl mx-auto">
         <h1 className="text-[3rem] leading-none gap-2 flex flex-col text-center font-semibold font-myAltFont">
           <motion.span
             initial={{ opacity: 0, y: 50 }}
