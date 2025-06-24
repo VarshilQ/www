@@ -6,7 +6,7 @@ import * as motion from "motion/react-client";
 
 function Meet() {
   return (
-    <section>
+    <section id="about" className="-mt-20 pt-20">
       <SecondaryHeading label={meetMeContent.title} />
       <motion.section
         initial={{ opacity: 0, y: 400 }}
@@ -16,8 +16,9 @@ function Meet() {
         className="border-2 border-foreground/10 group w-full mx-auto mt-16 max-w-2xl"
       >
         <Image
-          className="w-full aspect-[4/2] grayscale-100 group-hover:grayscale-0 transition bg-foreground/20"
-          src={person.image}
+          className="w-full object-cover aspect-[4/2] grayscale-100 group-hover:grayscale-0 transition bg-foreground/20"
+          // src={person.image}
+          src={"/offering_bg.svg"}
           alt={person.nickName}
           height={200}
           width={600}

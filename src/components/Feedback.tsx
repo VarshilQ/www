@@ -8,7 +8,7 @@ function Feedback() {
   return (
     <section>
       <SecondaryHeading label={feedbackContent.title} />
-      <section className="w-full mx-auto mt-16 p-16 bg-foreground/5 space-y-12 max-w-6xl">
+      <section className="w-full mx-auto mt-16 p-6 md:p-16 bg-foreground/5 space-y-12 max-w-6xl">
         {feedbackContent.feedbacks.map((item, index) => (
           <motion.div
             key={index}

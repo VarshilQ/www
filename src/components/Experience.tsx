@@ -22,7 +22,7 @@ function Experience() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.5 }}
-          className="w-full my-16 flex items-center justify-around"
+          className="w-full my-16 flex items-center gap-12 flex-wrap justify-around"
         >
           <RiAppleFill size={64} />
           <RiMetaLine size={64} />
@@ -36,10 +36,11 @@ function Experience() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.5 }}
-          className="w-full gap-6 group mx-auto max-w-2xl grid grid-cols-2 items-center"
+          className="w-full gap-6 group mx-auto max-w-2xl grid md:grid-cols-2 items-center"
         >
           <Image
-            src={workContent.image}
+            // src={workContent.image}
+            src={"/offering_bg.svg"}
             alt={"Image while working"}
             height={300}
             width={250}

@@ -6,15 +6,15 @@ import * as motion from "motion/react-client";
 
 function Hero() {
   return (
-    <section className="relative h-without-header overflow-hidden flex flex-col w-full">
+    <section className="relative min-h-without-header lg:h-without-header overflow-hidden flex flex-col w-full">
       <img
         alt={person.name}
-        className="absolute aspect-square -z-10 h-full inset-y-0 left-16"
+        className="absolute aspect-square -z-10 h-full inset-y-0 object-cover left-0 md:left-16"
         src={"/hero_bg.svg"}
       />
-      <div className="grid gap-6 w-full flex-1 pt-32 pb-24 grid-cols-4">
+      <div className="grid gap-8 lg:gap-6 w-full flex-1 max-lg:content-center lg:pt-32 pt-12 pb-12 grid-cols-1 lg:grid-cols-4">
         {/* Left section */}
-        <section className="flex h-full items-start justify-start">
+        <section className="order-2 lg:h-full lg:order-none flex h-fit items-start justify-start">
           <motion.p
             initial={{ opacity: 0, x: -200 }}
             animate={{ opacity: 1, x: 0 }}
@@ -26,12 +26,12 @@ function Hero() {
         </section>
 
         {/* Center section */}
-        <section className="flex col-span-2 flex-col items-center justify-center text-white">
+        <section className="order-1 lg:order-none flex lg:col-span-2 flex-col items-center justify-center text-foreground">
           <motion.h1
             initial={{ opacity: 0, y: 100 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5 }}
-            className="text-[5.5vw] mb-2 leading-none font-myAltFont text-center font-semibold"
+            className="text-[12vw] md:text-[10vw] lg:text-[5.5vw] mb-2 leading-none font-myAltFont text-center font-semibold"
           >
             <span className="block">{heroContent.center.split(" ")[0]}</span>
             <span className="block text-primary">
@@ -46,7 +46,7 @@ function Hero() {
           initial={{ opacity: 0, x: 200 }}
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.5 }}
-          className="flex flex-col gap-12 items-start justify-end"
+          className="flex order-3 lg:order-none flex-col gap-8 lg:gap-12 items-start justify-end"
         >
           <p className="font-myFont leading-6 text-lg">{heroContent.right}</p>
           <p className="uppercase underline underline-offset-8 tracking-widest font-sans text-sm">
@@ -62,7 +62,7 @@ function Hero() {
           duration: 1,
           delay: 0.5,
         }}
-        className="mx-auto bg-foreground text-background py-2 px-1 rounded-full mb-20"
+        className="mx-auto hidden lg:block bg-foreground text-background py-2 px-1 rounded-full mb-12 lg:mb-20"
       >
         <RiArrowDownLongLine size={16} />
       </motion.div>

@@ -12,7 +12,7 @@ function Offering() {
       )}
     >
       <SecondaryHeading label={offeringContent.title} />
-      <ul className="flex justify-center pt-12 gap-8">
+      <ul className="flex max-md:flex-col max-md:items-center justify-center pt-12 gap-8 gap-y-6">
         {offeringContent.services.map(function (item, index) {
           return (
             <li key={index} className="text-xl font-myFont">

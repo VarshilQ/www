@@ -5,14 +5,19 @@ import Meet from "@/components/Meet";
 import Offering from "@/components/Offering";
 import Experience from "@/components/Experience";
 import Image from "next/image";
+import { Metadata } from "next";
+import { metaInfo } from "@/lib/meta";
+
+export const metadata: Metadata = {
+  title: metaInfo.home.title,
+  description: metaInfo.home.description,
+  keywords: metaInfo.home.keywords,
+};
 
 export default function HomePage() {
   return (
     <main>
-      <div className="w-full h-20 bg-background" />
-      <section className="max-w-7xl space-y-20 mx-auto">
-        {/* Below header section */}
-
+      <section className="max-w-7xl max-lg:px-6 space-y-20 mx-auto">
         {/* Hero section */}
         <Hero />
 
@@ -25,7 +30,7 @@ export default function HomePage() {
         <Offering />
       </section>
 
-      <section className="max-w-7xl space-y-20 mx-auto">
+      <section className="max-w-7xl max-lg:px-6 mb-20 space-y-20 mx-auto">
         {/* Meet section */}
         <Meet />
 

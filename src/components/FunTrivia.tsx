@@ -7,7 +7,7 @@ function FunTrivia() {
   return (
     <section>
       <SecondaryHeading label={funTriviaContent.title} />
-      <section className="w-full font-myFont my-16 flex justify-between">
+      <section className="w-full font-myFont my-16 gap-6 max-md:flex-col flex justify-between">
         {funTriviaContent.states.map((item, index) => (
           <motion.div
             key={index}

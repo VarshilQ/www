@@ -9,13 +9,13 @@ interface FeedbackCardProps {
 
 function FeedbackCard(props: FeedbackCardProps) {
 	return (
-		<div className="flex border-b-2 pb-12 border-primary/20 last:border-0 gap-8 font-myFont">
+		<div className="flex max-md:flex-col border-b-2 pb-12 border-primary/20 last:border-0 gap-8 font-myFont">
 			<Image
 				src={props.image}
 				height={100}
 				width={100}
 				alt={props.author}
-				className="rounded-full size-24 bg-foreground/20"
+				className="rounded-full object-cover size-24 bg-foreground/20"
 			/>
 			<div className="flex flex-col gap-4">
 				<p className="text-xl pl-6 border-l-2 border-primary leading-8">{props.quote}</p>

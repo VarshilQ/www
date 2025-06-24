@@ -9,7 +9,7 @@ import { socialMediaLinks } from "@/lib/config";
 
 function SocialLinks() {
   return (
-    <div className="flex gap-12">
+    <div className="flex items-center gap-12">
       <a
         href={socialMediaLinks.twitter}
         target="_blank"
