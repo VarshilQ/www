@@ -29,7 +29,7 @@ function Header() {
         isMenuOpen && "bottom-0"
       )}
     >
-      <nav className="w-full max-w-7xl px-6 mx-auto grid grid-cols-2 md:grid-cols-3 items-center h-20 font-myAltFont">
+      <nav className="w-full max-w-7xl max-md:px-6 mx-auto grid grid-cols-2 md:grid-cols-3 items-center h-20 font-myAltFont">
         {/* Left: Social Icons */}
         <div className="w-full hidden md:block">
           <SocialLinks />

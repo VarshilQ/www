@@ -2,7 +2,7 @@ export const person = {
   name: "Varshil J. Patel",
   nickName: "Varshil",
   website: "https://varshil.info",
-  image: "",
+  image: "/about_varshil_img.png",
   email: "reach@varshil.info",
   phone: "",
 };
@@ -41,7 +41,7 @@ export const heroContent = {
 
 export const workContent = {
   title: "We are proud to have worked\nwith these amazing brands",
-  image: "/offering_bg.svg",
+  image: "/work_varshil_img.png",
   content: [
     "Will Paterson is a leading Graphic Designer and Content Creator who specialises in logo design, hand lettering, brand identity and videography.",
     "With more than 10 years of experience, Will has produced high-quality content for hundreds of clients, ranging from FTSE-listed corporations to SMEs.",
@@ -64,8 +64,8 @@ export const feedbackContent = {
   title: "My client's feedback is important for me",
   feedbacks: [
     {
-      image: "/offering_bg.svg",
-      author: "James Jani, YouTube Creator",
+      image: "https://media.licdn.com/dms/image/v2/D4D35AQGfHklowcq-lA/profile-framedphoto-shrink_400_400/profile-framedphoto-shrink_400_400/0/1735813674390?e=1751443200&v=beta&t=IaL9CNZSgdd_KHJymXYtiKTFvCpc2lWF42SHxwz412cE",
+      author: "Rakesh Prajapati, Frontend Developer at Orglife",
       quote:
         "I would absolutely recommend him to anyone looking to seriously invest in their brand identity and logo design – 10/10.",
     },

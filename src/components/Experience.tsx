@@ -36,22 +36,21 @@ function Experience() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.5 }}
-          className="w-full gap-6 group mx-auto max-w-2xl grid md:grid-cols-2 items-center"
+          className="w-full gap-6 group mx-auto max-w-2xl flex md:grid-cols-2 items-center"
         >
           <Image
-            // src={workContent.image}
-            src={"/offering_bg.svg"}
+            src={workContent.image}
             alt={"Image while working"}
-            height={300}
-            width={250}
-            className="h-full flex-1 object-cover transition grayscale-100 group-hover:grayscale-0 w-full bg-primary"
+            height={400}
+            width={300}
+            className="h-full flex-1 aspect-[3/4] object-cover transition-all duration-1000 md:grayscale-100 md:group-hover:grayscale-0"
           />
           <div className="flex-1 flex flex-col gap-6">
             {workContent.content.map(function (item, index) {
               return (
                 <p
                   key={index}
-                  className="text-foreground/80 transition group-hover:text-foreground"
+                  className="text-foreground/80 font-myFont transition group-hover:text-foreground"
                 >
                   {item}
                 </p>

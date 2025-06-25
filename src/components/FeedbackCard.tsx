@@ -19,7 +19,7 @@ function FeedbackCard(props: FeedbackCardProps) {
 			/>
 			<div className="flex flex-col gap-4">
 				<p className="text-xl pl-6 border-l-2 border-primary leading-8">{props.quote}</p>
-				<h4 className="text-foreground/50">{props.author}</h4>
+				<h4 className="text-foreground/50 font-myAltFont">{props.author}</h4>
 			</div>
 		</div>
 	);

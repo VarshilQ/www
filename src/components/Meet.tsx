@@ -16,9 +16,8 @@ function Meet() {
         className="border-2 border-foreground/10 group w-full mx-auto mt-16 max-w-2xl"
       >
         <Image
-          className="w-full object-cover aspect-[4/2] grayscale-100 group-hover:grayscale-0 transition bg-foreground/20"
-          // src={person.image}
-          src={"/offering_bg.svg"}
+          className="w-full object-cover aspect-[4/2] md:grayscale-100 md:group-hover:grayscale-0 transition-all duration-1000 bg-foreground/20"
+          src={person.image}
           alt={person.nickName}
           height={200}
           width={600}
