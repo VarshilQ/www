@@ -7,6 +7,7 @@ import Experience from "@/components/Experience";
 import Image from "next/image";
 import { Metadata } from "next";
 import { metaInfo } from "@/lib/meta";
+import WorkOverview from "@/components/WorkOverview";
 
 export const metadata: Metadata = {
   title: metaInfo.home.title,
@@ -31,6 +32,9 @@ export default function HomePage() {
         {/* Offering section */}
         <Offering />
       </section>
+
+      {/* Work overview section */}
+      <WorkOverview />
 
       <section className="max-w-7xl max-lg:px-6 mb-12 lg:mb-20 space-y-20 mx-auto">
         {/* Meet section */}

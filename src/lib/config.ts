@@ -25,78 +25,88 @@ export const navMenu = {
 };
 
 export const socialMediaLinks = {
-  github: "",
-  twitter: "",
-  linkedin: "",
-  facebook: "",
+  github: "https://github.com/varshiljpatel",
+  twitter: "https://twitter.com/varshiljpatel",
+  linkedin: "https://www.linkedin.com/in/varshiljpatel/",
+  facebook: "https://facebook.com/Varshil.J.Patel",
 };
 
 export const heroContent = {
-  left: "Will Paterson Design Studio is a leading boutique studio for the creation of best-in-class logo design and brand identity.",
+  left: "Varshil J. Patel is a skilled developer crafting modern full-stack software and high-performance applications.",
   center: "Software Draftsperson",
   right:
-    "We educate people about their brand stories, identity, design and business. Through creative excellence, we transform brands into sustainable success stories that inspire customers and employees alike.",
+    "Varshil helps businesses to build digital identities, scalable software, and impactful user experiences. Through clean architecture and modern technologies, He turn ideas into powerful products that engage users and drive growth.",
   ctaLabel: "Let's Talk",
+  ctaLink: "/reach",
 };
 
-export const workContent = {
-  title: "We are proud to have worked\nwith these amazing brands",
+export const experienceContent = {
+  title: "Honored to work with visionary brands & teams",
   image: "/work_varshil_img.png",
   content: [
-    "Will Paterson is a leading Graphic Designer and Content Creator who specialises in logo design, hand lettering, brand identity and videography.",
-    "With more than 10 years of experience, Will has produced high-quality content for hundreds of clients, ranging from FTSE-listed corporations to SMEs.",
-    "Will is a world-renowned designer whose YouTube videos and tutorials have amassed over 50 million views since it’s launch, inspiring and equipping designers all around the world to hone and develop their skills.",
+    "Varshil J. Patel is a Software Development Engineer specializing in full-stack development, system design, and cross-platform application development.",
+    "With over 3 years of hands-on experience, including 6 months in the software industry, Varshil has built and contributed to multiple real-world projects—ranging from personal SaaS tools to industry-grade applications.",
+    "Despite his young age, Varshil is emerging as a promising developer whose modern coding practices, open-source contributions, and deep technical insight continue to inspire and support the developer community.",
   ],
 };
 
 export const offeringContent = {
-  title: "Service I Offer",
-  services: ["Web Development", "Graphic Design", "Photography"],
+  title: "Service Varshil Offer",
+  services: [
+    "Full-Stack Development",
+    "App Development",
+    "System Design",
+    "UI/UX Engineering",
+  ],
+};
+
+export const WorkOverviewContent = {
+  title: "Work Overview",
 };
 
 export const meetMeContent = {
-  title: "Meet Me",
+  title: "Meet Varshil",
   content:
-    "Will is a creative director, designer, branding expert and YouTuber. He’s been designing for over a decade, beginning as a freelance artist to now being the proud owner of our design agency, based in the North East of England. He loves creating memorable, unique branding for companies as well as YouTube videos to help people level up their own design skills and knowledge.",
+    "Varshil is a software engineer, full-stack developer, and tech enthusiast. He began coding at a young age and quickly grew into a product-focused builder, now leading his own development projects. He enjoys creating modern apps and sharing insights to help others improve their software development skills.",
 };
 
 export const feedbackContent = {
-  title: "My client's feedback is important for me",
+  title: "Client's feedback is important for Varshil",
   feedbacks: [
     {
-      image: "https://media.licdn.com/dms/image/v2/D4D35AQGfHklowcq-lA/profile-framedphoto-shrink_400_400/profile-framedphoto-shrink_400_400/0/1735813674390?e=1751443200&v=beta&t=IaL9CNZSgdd_KHJymXYtiKTFvCpc2lWF42SHxwz412cE",
+      image: "/feedbacks/rakesh_prajapati.jpg",
       author: "Rakesh Prajapati, Frontend Developer at Orglife",
       quote:
-        "I would absolutely recommend him to anyone looking to seriously invest in their brand identity and logo design – 10/10.",
+        "I would absolutely recommend him to anyone looking to seriously invest in their software and ui design – 10/10.",
     },
     {
-      image: "/offering_bg.svg",
-      author: "Chelsea Drake, Co-Owner at Raspaderia",
+      image: "/feedbacks/shivam_patel.jpg",
+      author: "Shivam Patel, Post-Production Engineer at Orglife",
       quote:
-        "Will Paterson’s team were incredibly detailed, thorough, and robust. Often with design projects, you get just that, a design, but their expertise in developing brands at all different stages really sets them apart and guides you on the “bigger picture” and the critical role each design element plays.",
+        "Varshil’s team were incredibly detailed, thorough, and robust. Often with design projects, you get just that, a design, but their expertise in developing softwares at all different stages really sets them apart and guides you on the “bigger picture” and the critical role each design element plays.",
     },
   ],
 };
 
 export const funTriviaContent = {
   title: "Fun Trivia",
-  note: "* A slight exaggeration on the coffee statistic. However, we do like coffee to fuel our creative processes.",
+  note: "* A slight exaggeration on the coffee statistic. However, Varshil do like coffee to fuel his creative processes.",
   states: [
     {
-      label: "Years Design Experience",
-      value: "10+",
+      label: "Years Development Experience",
+      value: "3+",
     },
     {
-      label: "YouTube Subscribers",
-      value: "500K+",
+      label: "Industry Experience",
+      value: "6M+",
     },
     {
-      label: "YouTube Views",
-      value: "50M+",
+      label: "Personal Projects",
+      value: "4+",
     },
     {
-      label: "YouTube Views",
-      value: "50M+",
+      label: "Industry Projects",
+      value: "2",
     },
   ],
 };
@@ -106,7 +116,8 @@ export const footerContent = {
   ctaLabel: "Find out more",
   ctaLink: "/",
   description:
-    "We educate people about their brand stories, identity, design and business. Through creative excellence, we transform brands into sustainable success stories that inspire customers and employees alike.",
+    "Varshil helps people bring their software ideas to life through clean code, thoughtful design, and scalable systems. With technical precision and modern tools, He turn concepts into digital products that empower businesses and delight users worldwide.",
+
   copyright: `Copyright © ${new Date().getFullYear()} ${
     person.name
   }. All rights reserved.`,
@@ -169,5 +180,5 @@ export const workPageContent = {
 export const reachPageContent = {
   title: "Reach Varshil",
   content:
-    "If you have any questions, feedback, or just want to say hello, feel free to reach out. I would love to hear from you!",
+    "If you have any questions, feedback, or just want to say hello, feel free to reach out. Varshil would love to hear from you!",
 };

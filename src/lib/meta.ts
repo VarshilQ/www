@@ -2,13 +2,8 @@ import { person } from "./config";
 
 export const metaInfo = {
   home: {
-    title: person.name + " - Information and Updates",
-    description:
-      "Welcome to" +
-      " " +
-      person.name +
-      "'s " +
-      "portfolio where you can find the latest software development and engineering related updates and features.",
+    title: `${person.name} | Software Engineer & Developer Portfolio`,
+    description: `Welcome to ${person.name}'s official portfolio. Discover ${person.nickName}'s latest software development projects, engineering insights, and technical updates. Your go-to resource for cutting-edge software solutions.`,
     keywords: [
       person.name,
       person.nickName,
@@ -24,14 +19,12 @@ export const metaInfo = {
       "Varshil Patel Software Engineer",
       "Varshil Patel Software Developer",
       "Software Draftsperson",
+      "Tech Insights",
     ],
   },
   work: {
-    title: person.name + "'s - Work and Projects",
-    description:
-      "Explore software development engineering work and projects of " +
-      person.name +
-      ".",
+    title: `${person.name}'s Projects | Software Development Portfolio Showcase`,
+    description: `Explore ${person.name}'s diverse portfolio of software development and engineering projects. See real-world applications and innovative solutions. View ${person.nickName}'s work today!`,
     keywords: [
       person.name + " Work",
       person.name + " Projects",
@@ -43,14 +36,13 @@ export const metaInfo = {
       "Varshil Patel Projects",
       "Varshil Patel Portfolio",
       "Software Draftsperson",
+      "Software Projects",
+      "Development Showcase",
     ],
   },
   reach: {
-    title: "Reach " + person.name + " - Get in Touch",
-    description:
-      "Get in touch with " +
-      person.name +
-      " for inquiries, collaborations, contact or feedback.",
+    title: `Contact ${person.name} | Get in Touch for Collaborations`,
+    description: `Connect with ${person.name} for software development collaborations, project inquiries, or professional networking. Reach out directly and let's build something great together.`,
     keywords: [
       person.name + " Contact",
       person.name + " Reach",
@@ -62,6 +54,9 @@ export const metaInfo = {
       "Varshil Patel Reach",
       "Varshil Patel Portfolio Contact",
       "Software Draftsperson",
+      "Software Engineer Contact",
+      "Collaboration",
+      "Professional Networking",
     ],
   },
 };

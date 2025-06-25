@@ -6,10 +6,10 @@ import * as motion from "motion/react-client";
 
 function Meet() {
   return (
-    <section id="about" className="-mt-20 pt-20">
+    <section id="about" className="pt-20">
       <SecondaryHeading label={meetMeContent.title} />
       <motion.section
-        initial={{ opacity: 0, y: 400 }}
+        initial={{ opacity: 0, y: 200 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
         transition={{ duration: 0.5 }}

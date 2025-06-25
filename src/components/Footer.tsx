@@ -18,8 +18,8 @@ function Footer() {
           {footerContent.ctaLabel}
         </Link>
       </div>
-      <div className="w-full mt-16 mb-8 gap-8 flex flex-col items-start justify-between max-w-7xl max-md:px-6 mx-auto">
-        <div className="w-full flex max-md:flex-col items-start justify-between gap-y-12">
+      <div className="w-full mt-16 mb-8 gap-12 md:gap-8 flex flex-col items-start justify-between max-w-7xl max-md:px-6 mx-auto">
+        <div className="w-full flex max-md:flex-col items-start justify-between gap-y-20">
           <div className="flex flex-col gap-8 items-start max-w-2xl w-full">
             <Link href={"/"}>
               <Image

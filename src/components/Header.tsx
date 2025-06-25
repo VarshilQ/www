@@ -26,7 +26,7 @@ function Header() {
     <header
       className={cn(
         "w-full z-10 backdrop-blur-sm fixed top-0 inset-x-0 bg-background/50",
-        isMenuOpen && "bottom-0"
+        isMenuOpen && "bottom-0 backdrop-blur-2xl",
       )}
     >
       <nav className="w-full max-w-7xl max-md:px-6 mx-auto grid grid-cols-2 md:grid-cols-3 items-center h-20 font-myAltFont">
@@ -41,7 +41,7 @@ function Header() {
             height={"64"}
             width={"160"}
             src={"/icon.svg"}
-            className="mx-auto"
+            className="md:mx-auto"
             alt={person.nickName}
           />
         </Link>
@@ -76,7 +76,7 @@ function Header() {
                 href={item.link}
                 key={index}
                 onClick={() => setIsMenuOpen(false)}
-                className="relative border-b-2 group first:border-t-2 border-foreground/25 font-semibold text-4xl py-4"
+                className="relative border-b-2 group first:border-t-2 border-foreground/25 font-semibold text-[3rem] py-4"
               >
                 <div
                   className={cn(

@@ -3,10 +3,11 @@ import { RiArrowDownLongLine, RiArrowDownWideLine } from "@remixicon/react";
 import Sign from "./Sign";
 import React from "react";
 import * as motion from "motion/react-client";
+import Link from "next/link";
 
 function Hero() {
   return (
-    <section className="max-lg:px-6 relative min-h-without-header lg:h-without-header overflow-hidden flex flex-col w-full">
+    <section className="max-lg:px-6 relative min-h-[calc(100vh-5rem)] lg:min-h-without-header lg:h-without-header overflow-hidden flex flex-col w-full">
       <img
         alt={person.name}
         className="absolute aspect-square -z-10 h-full inset-y-0 object-cover left-0 md:left-16"
@@ -31,7 +32,7 @@ function Hero() {
             initial={{ opacity: 0, y: 100 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5 }}
-            className="text-[12vw] md:text-[10vw] lg:text-[5.5vw] mb-2 leading-none font-myAltFont text-center font-semibold"
+            className="text-[12vw] md:text-[10vw] lg:text-[5.5rem] mb-2 leading-none font-myAltFont text-center font-semibold"
           >
             <span className="block">{heroContent.center.split(" ")[0]}</span>
             <span className="block text-primary">
@@ -49,9 +50,9 @@ function Hero() {
           className="flex order-3 lg:order-none flex-col gap-8 lg:gap-12 items-start justify-end"
         >
           <p className="font-myFont leading-6 text-lg">{heroContent.right}</p>
-          <p className="uppercase underline underline-offset-8 tracking-widest font-sans text-sm">
+          <Link href={heroContent.ctaLink} className="uppercase underline underline-offset-8 tracking-widest font-sans text-sm">
             {heroContent.ctaLabel}
-          </p>
+          </Link>
         </motion.section>
       </div>
       {/* Scroll down icon */}
