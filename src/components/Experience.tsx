@@ -6,7 +6,6 @@ import {
   RiGoogleLine,
   RiMetaLine,
   RiMicrosoftFill,
-  RiTwitterFill,
 } from "@remixicon/react";
 import Image from "next/image";
 import * as motion from "motion/react-client";

@@ -1,5 +1,5 @@
 import { heroContent, person } from "@/lib/config";
-import { RiArrowDownLongLine, RiArrowDownWideLine } from "@remixicon/react";
+import { RiArrowDownLongLine } from "@remixicon/react";
 import Sign from "./Sign";
 import React from "react";
 import * as motion from "motion/react-client";

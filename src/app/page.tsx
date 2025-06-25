@@ -4,7 +4,6 @@ import Hero from "@/components/Hero";
 import Meet from "@/components/Meet";
 import Offering from "@/components/Offering";
 import Experience from "@/components/Experience";
-import Image from "next/image";
 import { Metadata } from "next";
 import { metaInfo } from "@/lib/meta";
 import WorkOverview from "@/components/WorkOverview";
