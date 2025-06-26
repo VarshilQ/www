@@ -2,7 +2,7 @@
 
 import React, { useRef } from "react";
 import SecondaryHeading from "./SecondaryHeading";
-import { WorkOverviewContent, workPageContent } from "@/lib/config";
+import { WorkOverviewContent } from "@/lib/config";
 import { motion, useScroll, useTransform } from "framer-motion";
 import Image from "next/image";
 import { work } from "@/lib/work";
@@ -23,7 +23,7 @@ function WorkOverview() {
     >
       <SecondaryHeading label={WorkOverviewContent.title} />
       <motion.div style={{ x }} className="mx-auto flex gap-8 flex-1">
-        {Object.entries(work).map(function ([key, value], index) {
+        {Object.entries(work).map(function ([, value], index) {
           return (
             <Image
               height={360}

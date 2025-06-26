@@ -47,7 +47,7 @@ function Hero() {
           initial={{ opacity: 0, x: 200 }}
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.5 }}
-          className="flex order-3 lg:order-none flex-col gap-8 lg:gap-12 items-start justify-end"
+          className="flex order-3 lg:order-none flex-col gap-8 lg:gap-8 items-start justify-end"
         >
           <p className="font-myFont leading-6 text-lg">{heroContent.right}</p>
           {/* <Link href={heroContent.ctaLink} className="uppercase underline underline-offset-8 tracking-widest font-sans text-sm">

@@ -10,7 +10,9 @@ export async function generateStaticParams() {
   }));
 }
 
-async function WorkDetailsPage({ params }: { params: { slug: string } }) {
+type Params = Promise<{ slug: string }>;
+
+async function WorkDetailsPage({ params }: { params: Params }) {
   const { slug } = await params;
   const currentWork: IWorkDetails | undefined | null = work[slug];
 
@@ -33,33 +35,41 @@ async function WorkDetailsPage({ params }: { params: { slug: string } }) {
           aria-label={currentWork.image.alt}
           className="w-full mx-auto bg-foreground/20 aspect-[16/9]"
         />
-        <div className="w-full mx-auto flex-col items-start max-w-2xl flex">
-          <h1 className="font-myAltFont font-semibold text-4xl leading-tight">
-            {currentWork.title}
-          </h1>
-          <p className="font-myFont mt-1 opacity-80">
-            {currentWork.description}
-          </p>
-          <div className="w-1/6 mt-6 h-1 bg-primary"></div>
-          <div className="space-y-6 my-12">
-            <h2 className="font-myAltFont text-2xl font-semibold">
-              Work Summary
-            </h2>
-            {currentWork.content.map(function (item, index) {
-              return (
-                <p key={index} className="font-myFont opacity-80 leading-tight">
-                  {item}
-                </p>
-              );
-            })}
+        <div className="w-full mx-auto gap-12 max-md:flex-col flex">
+          <div className="w-2/6">
+            <h1 className="font-myAltFont font-semibold text-4xl leading-tight">
+              {currentWork.title}
+            </h1>
+            <p className="font-myFont mt-1 opacity-80">
+              {currentWork.description}
+            </p>
+            <div className="w-2/6 mt-6 h-1 bg-primary"></div>
           </div>
-          {currentWork.url && (
-            <LinkButton
-              icon={<RiArrowRightUpLine size={16} />}
-              label="View Project"
-              href={currentWork.url}
-            />
-          )}
+          <div className="w-4/6">
+            <div className="space-y-6 mb-12">
+              <h2 className="font-myAltFont text-2xl font-semibold">
+                Work Summary
+              </h2>
+              {currentWork.content.map(function (item, index) {
+                return (
+                  <p
+                    key={index}
+                    className="font-myFont opacity-80 leading-tight"
+                  >
+                    {item}
+                  </p>
+                );
+              })}
+            </div>
+            {currentWork.url && (
+              <LinkButton
+                target="_blank"
+                icon={<RiArrowRightUpLine size={16} />}
+                label="View Project"
+                href={currentWork.url}
+              />
+            )}
+          </div>
         </div>
       </section>
     </main>

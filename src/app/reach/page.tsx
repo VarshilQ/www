@@ -44,7 +44,7 @@ function ReachPage() {
           initial={{ opacity: 0, y: 50 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5, delay: 0.5 }}
-          className="text-center mx-auto text-foreground/80 max-w-lg font-myFont text-lg"
+          className="text-center mx-auto text-foreground/80 max-w-xl font-myFont text-lg"
         >
           {reachPageContent.content}
         </motion.p>

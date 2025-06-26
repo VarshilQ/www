@@ -48,12 +48,12 @@ function ReachQuestionnaire() {
   return (
     <div className="w-full flex flex-col gap-12">
       {/* Stepper UI */}
-      <div id="stepper" className="flex items-center max-w-lg mx-auto w-full">
+      <div id="stepper" className="flex items-center max-w-xl mx-auto w-full">
         {[1, 2, 3].map((s, i) => (
           <React.Fragment key={s}>
             <div
               className={cn(
-                "size-4 rounded-full",
+                "size-4",
                 step >= s ? "bg-primary" : "bg-muted"
               )}
             ></div>
@@ -72,7 +72,7 @@ function ReachQuestionnaire() {
       {/* Form Content */}
       <form
         onSubmit={handleSubmit(onSubmit)}
-        className="font-sans flex flex-col mx-auto w-full max-w-lg gap-6"
+        className="font-sans flex flex-col mx-auto w-full max-w-xl gap-6"
       >
         {step === 1 && (
           <>
@@ -80,7 +80,7 @@ function ReachQuestionnaire() {
               type="text"
               placeholder="Enter Your Name"
               className={cn(
-                "w-full h-12 bg-transparent border px-4 outline-none transition",
+                "w-full h-12 font-sans bg-transparent border px-4 outline-none transition",
                 "border-primary focus:border-foreground/80"
               )}
               {...register("name", { required: "Name is required" })}
@@ -97,7 +97,7 @@ function ReachQuestionnaire() {
               type="email"
               placeholder="Enter Your Email"
               className={cn(
-                "w-full h-12 bg-transparent border px-4 outline-none transition",
+                "w-full h-12 font-sans bg-transparent border px-4 outline-none transition",
                 "border-primary focus:border-foreground/80"
               )}
               {...register("email", {
@@ -119,7 +119,7 @@ function ReachQuestionnaire() {
             <textarea
               placeholder="Enter Your Message"
               className={cn(
-                "w-full resize-none h-36 py-2 bg-transparent border px-4 outline-none transition",
+                "w-full resize-none font-sans h-36 py-2 bg-transparent border px-4 outline-none transition",
                 "border-primary focus:border-foreground/80"
               )}
               {...register("message", { required: "Message is required" })}
@@ -137,7 +137,7 @@ function ReachQuestionnaire() {
               type="button"
               onClick={handlePrevious}
               className={cn(
-                "h-12 px-6 border font-medium text-sm transition",
+                "h-12 px-6 border font-sans font-medium text-sm transition",
                 "border-primary text-foreground hover:bg-primary/80"
               )}
             >
@@ -153,7 +153,7 @@ function ReachQuestionnaire() {
               onClick={handleNext}
               disabled={!isStepValid()}
               className={cn(
-                "h-12 px-6 font-medium text-sm transition",
+                "h-12 px-6 font-sans font-medium text-sm transition",
                 "bg-primary text-foreground hover:bg-primary/80",
                 !isStepValid() && "opacity-50 cursor-not-allowed"
               )}
@@ -165,7 +165,7 @@ function ReachQuestionnaire() {
               type="submit"
               disabled={!isStepValid()}
               className={cn(
-                "h-12 px-6 font-medium text-sm transition",
+                "h-12 px-6 font-medium font-sans text-sm transition",
                 "bg-primary text-foreground hover:bg-primary/80",
                 !isStepValid() && "opacity-50 cursor-not-allowed"
               )}
