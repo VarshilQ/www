@@ -5,6 +5,7 @@ import SecondaryHeading from "./SecondaryHeading";
 import { WorkOverviewContent, workPageContent } from "@/lib/config";
 import { motion, useScroll, useTransform } from "framer-motion";
 import Image from "next/image";
+import { work } from "@/lib/work";
 
 function WorkOverview() {
   const containerRef = useRef(null);
@@ -22,15 +23,15 @@ function WorkOverview() {
     >
       <SecondaryHeading label={WorkOverviewContent.title} />
       <motion.div style={{ x }} className="mx-auto flex gap-8 flex-1">
-        {workPageContent.projects.map(function (project, index) {
+        {Object.entries(work).map(function ([key, value], index) {
           return (
             <Image
               height={360}
               width={640}
-              src={project.image}
-              title={project.description}
+              src={value.image.src}
+              title={value.title}
               className="h-[360px] border-t border-primary border-r-4 bg-foreground aspect-[16/9]"
-              alt={project.description}
+              alt={value.image.alt}
               key={index}
             />
           );

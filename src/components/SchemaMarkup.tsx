@@ -3,19 +3,19 @@ function SchemaMarkup() {
     "@context": "https://schema.org",
     "@type": "Person",
     name: "Varshil J. Patel",
-    url: "https://varshil.info",
-    image: "https://varshil.info/varshil.jpg",
+    url: "https://varshilq.com",
+    image: "https://varshilq.com/varshil.jpg",
     sameAs: [
-      "https://www.linkedin.com/in/varshiljpatel",
-      "https://github.com/varshiljpatel",
-      "https://x.com/varshiljpatel",
-      "https://facebook.com/Varshil.J.Patel",
+      "https://www.linkedin.com/in/VarshilQ",
+      "https://github.com/VarshilQ",
+      "https://x.com/VarshilQ",
+      "https://facebook.com/VarshilQ",
     ],
     jobTitle: "Software Development Engineer",
-    worksFor: { "@type": "Organization", name: "Self-employed" },
+    worksFor: { "@type": "Organization", name: "Orglife Industries Pvt. Ltd." },
     description:
       "Varshil J. Patel is a software development engineer specializing in full-stack development, app design, and modern web technologies including React, Node.js, Rust, and Tauri.",
-    email: "mailto:reach@varshil.info",
+    email: "mailto:reach@varshilq.com",
     knowsAbout: [
       "Full-Stack Development",
       "React",
@@ -33,19 +33,19 @@ function SchemaMarkup() {
     "@context": "https://schema.org",
     "@type": "WebSite",
     name: "Varshil J. Patel Portfolio",
-    url: "https://varshil.info",
+    url: "https://varshilq.com",
     description:
       "Portfolio website of Varshil J. Patel — a full-stack developer building modern, scalable software using React, Node.js, Rust, and cross-platform technologies.",
     inLanguage: "en",
     publisher: {
       "@type": "Person",
       name: "Varshil J. Patel",
-      url: "https://varshil.info",
+      url: "https://varshilq.com",
     },
     mainEntity: [
-      { "@type": "WebPage", name: "Inforamtion", url: "https://varshil.info" },
-      { "@type": "WebPage", name: "Work", url: "https://varshil.info/work" },
-      { "@type": "WebPage", name: "Reach", url: "https://varshil.info/reach" },
+      { "@type": "WebPage", name: "Inforamtion", url: "https://varshilq.com" },
+      { "@type": "WebPage", name: "Work", url: "https://varshilq.com/work" },
+      { "@type": "WebPage", name: "Reach", url: "https://varshilq.com/reach" },
     ],
   };
 

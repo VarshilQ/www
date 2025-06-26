@@ -1,15 +1,41 @@
 "use client";
 
 import React, { useState } from "react";
+import { useForm } from "react-hook-form";
 import { cn } from "@/lib/utils";
+import type { FormData } from "@/types/questionnaire";
 
 function ReachQuestionnaire() {
   const [step, setStep] = useState(1);
-  const [formData, setFormData] = useState({
-    name: "",
-    email: "",
-    message: "",
+
+  const {
+    register,
+    handleSubmit,
+    watch,
+    formState: { errors },
+  } = useForm<FormData>({
+    mode: "onTouched",
+    defaultValues: {
+      name: "",
+      email: "",
+      message: "",
+    },
   });
+
+  const name = watch("name");
+  const email = watch("email");
+  const message = watch("message");
+
+  const isStepValid = () => {
+    if (step === 1) return !!name && !errors.name;
+    if (step === 2) return !!email && !errors.email;
+    if (step === 3) return !!message && !errors.message;
+    return false;
+  };
+
+  const onSubmit = (data: FormData) => {
+    alert(JSON.stringify(data, null, 2));
+  };
 
   const handleNext = () => {
     if (step < 3) setStep(step + 1);
@@ -17,18 +43,6 @@ function ReachQuestionnaire() {
 
   const handlePrevious = () => {
     if (step > 1) setStep(step - 1);
-  };
-
-  const handleChange = (
-    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
-  ) => {
-    const { name, value } = e.target;
-    setFormData((prev) => ({ ...prev, [name]: value }));
-  };
-
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    alert(JSON.stringify(formData, null, 2));
   };
 
   return (
@@ -57,51 +71,63 @@ function ReachQuestionnaire() {
 
       {/* Form Content */}
       <form
-        onSubmit={handleSubmit}
+        onSubmit={handleSubmit(onSubmit)}
         className="font-sans flex flex-col mx-auto w-full max-w-lg gap-6"
       >
         {step === 1 && (
-          <input
-            type="text"
-            name="name"
-            value={formData.name}
-            onChange={handleChange}
-            className={cn(
-              "w-full h-12 bg-transparent border px-4 outline-none transition",
-              "border-primary focus:border-foreground/80"
+          <>
+            <input
+              type="text"
+              placeholder="Enter Your Name"
+              className={cn(
+                "w-full h-12 bg-transparent border px-4 outline-none transition",
+                "border-primary focus:border-foreground/80"
+              )}
+              {...register("name", { required: "Name is required" })}
+            />
+            {errors.name && (
+              <p className="text-red-500 text-sm">{errors.name.message}</p>
             )}
-            placeholder="Enter Your Name"
-            required
-          />
+          </>
         )}
 
         {step === 2 && (
-          <input
-            type="email"
-            name="email"
-            value={formData.email}
-            onChange={handleChange}
-            className={cn(
-              "w-full h-12 bg-transparent border px-4 outline-none transition",
-              "border-primary focus:border-foreground/80"
+          <>
+            <input
+              type="email"
+              placeholder="Enter Your Email"
+              className={cn(
+                "w-full h-12 bg-transparent border px-4 outline-none transition",
+                "border-primary focus:border-foreground/80"
+              )}
+              {...register("email", {
+                required: "Email is required",
+                pattern: {
+                  value: /^[^\s@]+@[^\s@]+\.[^\s@]+$/,
+                  message: "Enter a valid email",
+                },
+              })}
+            />
+            {errors.email && (
+              <p className="text-red-500 text-sm">{errors.email.message}</p>
             )}
-            placeholder="Enter Your Email"
-            required
-          />
+          </>
         )}
 
         {step === 3 && (
-          <textarea
-            name="message"
-            value={formData.message}
-            onChange={handleChange}
-            className={cn(
-              "w-full resize-none h-36 py-2 bg-transparent border px-4 outline-none transition",
-              "border-primary focus:border-foreground/80"
+          <>
+            <textarea
+              placeholder="Enter Your Message"
+              className={cn(
+                "w-full resize-none h-36 py-2 bg-transparent border px-4 outline-none transition",
+                "border-primary focus:border-foreground/80"
+              )}
+              {...register("message", { required: "Message is required" })}
+            />
+            {errors.message && (
+              <p className="text-red-500 text-sm">{errors.message.message}</p>
             )}
-            placeholder="Enter Your Message"
-            required
-          />
+          </>
         )}
 
         {/* Buttons */}
@@ -125,9 +151,11 @@ function ReachQuestionnaire() {
             <button
               type="button"
               onClick={handleNext}
+              disabled={!isStepValid()}
               className={cn(
                 "h-12 px-6 font-medium text-sm transition",
-                "bg-primary text-foreground hover:bg-primary/80"
+                "bg-primary text-foreground hover:bg-primary/80",
+                !isStepValid() && "opacity-50 cursor-not-allowed"
               )}
             >
               Next
@@ -135,9 +163,11 @@ function ReachQuestionnaire() {
           ) : (
             <button
               type="submit"
+              disabled={!isStepValid()}
               className={cn(
                 "h-12 px-6 font-medium text-sm transition",
-                "bg-primary text-foreground hover:bg-primary/80"
+                "bg-primary text-foreground hover:bg-primary/80",
+                !isStepValid() && "opacity-50 cursor-not-allowed"
               )}
             >
               Submit

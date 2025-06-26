@@ -1,9 +1,9 @@
 export const person = {
   name: "Varshil J. Patel",
   nickName: "Varshil",
-  website: "https://varshil.info",
+  website: "https://varshilq.com",
   image: "/about_varshil_img.png",
-  email: "reach@varshil.info",
+  email: "reach@varshilq.com",
   phone: "",
 };
 
@@ -25,17 +25,17 @@ export const navMenu = {
 };
 
 export const socialMediaLinks = {
-  github: "https://github.com/varshiljpatel",
-  twitter: "https://twitter.com/varshiljpatel",
-  linkedin: "https://www.linkedin.com/in/varshiljpatel/",
-  facebook: "https://facebook.com/Varshil.J.Patel",
+  github: "https://github.com/VarshilQ",
+  twitter: "https://twitter.com/VarshilQ",
+  linkedin: "https://www.linkedin.com/in/VarshilQ/",
+  facebook: "https://facebook.com/VarshilQ",
 };
 
 export const heroContent = {
   left: "Varshil J. Patel is a skilled developer crafting modern full-stack software and high-performance applications.",
   center: "Software Draftsperson",
   right:
-    "Varshil helps businesses to build digital identities, scalable software, and impactful user experiences. Through clean architecture and modern technologies, He turn ideas into powerful products that engage users and drive growth.",
+    "Varshil helps businesses to build digital identities, scalable software, and impactful user experiences. He turn ideas into powerful products that engage users and drive growth.",
   ctaLabel: "Let's Talk",
   ctaLink: "/reach",
 };
@@ -114,7 +114,7 @@ export const funTriviaContent = {
 export const footerContent = {
   ctaText: "Let us maximise your company’s potential",
   ctaLabel: "Find out more",
-  ctaLink: "/",
+  ctaLink: "/reach",
   description:
     "Varshil helps people bring their software ideas to life through clean code, thoughtful design, and scalable systems. With technical precision and modern tools, He turn concepts into digital products that empower businesses and delight users worldwide.",
 
@@ -143,39 +143,6 @@ export const footerContent = {
 
 export const workPageContent = {
   title: "Varshil's Work",
-  projects: [
-    {
-      image: "/work/fill_work.png",
-      link: "/work/fill",
-      description:
-        "An web based intuitive SaaS platform that takes your prompt and generates customized, dynamic forms instantly, enhancing data collection and user interaction.",
-    },
-    {
-      image: "/offering_bg.svg",
-      link: "/work/project2",
-      description: "Project 2 Description",
-    },
-    {
-      image: "/offering_bg.svg",
-      link: "/work/project3",
-      description: "Project 3 Description",
-    },
-    {
-      image: "/offering_bg.svg",
-      link: "/work/project4",
-      description: "Project 4 Description",
-    },
-    {
-      image: "/offering_bg.svg",
-      link: "/work/project5",
-      description: "Project 5 Description",
-    },
-    {
-      image: "/offering_bg.svg",
-      link: "/work/project6",
-      description: "Project 6 Description",
-    },
-  ],
 };
 
 export const reachPageContent = {

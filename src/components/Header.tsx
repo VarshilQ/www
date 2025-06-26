@@ -25,7 +25,7 @@ function Header() {
   return (
     <header
       className={cn(
-        "w-full z-10 backdrop-blur-sm fixed top-0 inset-x-0 bg-background/50",
+        "w-full z-10 backdrop-blur-sm fixed top-0 inset-x-0 bg-background/65",
         isMenuOpen && "bottom-0 backdrop-blur-2xl",
       )}
     >
@@ -76,7 +76,7 @@ function Header() {
                 href={item.link}
                 key={index}
                 onClick={() => setIsMenuOpen(false)}
-                className="relative border-b-2 group first:border-t-2 border-foreground/25 font-semibold text-[3rem] py-4"
+                className="relative border-b-2 group first:border-t-2 border-foreground/25 font-semibold text-[4rem] py-4"
               >
                 <div
                   className={cn(

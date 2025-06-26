@@ -5,6 +5,7 @@ import React from "react";
 import * as motion from "motion/react-client";
 import { metaInfo } from "@/lib/meta";
 import { Metadata } from "next";
+import { work } from "@/lib/work";
 
 export const metadata: Metadata = {
   title: metaInfo.work.title,
@@ -34,7 +35,7 @@ function WorkPage() {
           </motion.span>
         </h1>
         <div className="w-full mt-16 grid grid-cols-1 md:grid-cols-2 gap-6">
-          {workPageContent.projects.map((item, index) => (
+          {Object.entries(work).map(([key, value], index) => (
             <motion.div
               key={index}
               initial={{ opacity: 0, y: 40 }}
@@ -43,12 +44,12 @@ function WorkPage() {
               className="bg-foreground"
               transition={{ duration: 0.5, delay: index * 0.2 }}
             >
-              <Link href={item.link}>
+              <Link href={`/work/${key}`}>
                 <Image
-                  src={item.image}
-                  aria-label={item.description}
-                  title={item.description}
-                  alt={item.description}
+                  src={value.image.src}
+                  aria-label={value.image.alt}
+                  title={value.title}
+                  alt={value.image.alt}
                   width={640}
                   height={360}
                   className="w-full bg-foreground/20 aspect-[16/9]"
