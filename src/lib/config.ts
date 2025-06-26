@@ -145,9 +145,10 @@ export const workPageContent = {
   title: "Varshil's Work",
   projects: [
     {
-      image: "/offering_bg.svg",
-      link: "/work/project1",
-      description: "Project 1 Description",
+      image: "/work/fill_work.png",
+      link: "/work/fill",
+      description:
+        "An web based intuitive SaaS platform that takes your prompt and generates customized, dynamic forms instantly, enhancing data collection and user interaction.",
     },
     {
       image: "/offering_bg.svg",
