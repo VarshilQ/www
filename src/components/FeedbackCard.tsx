@@ -9,7 +9,7 @@ interface FeedbackCardProps {
 
 function FeedbackCard(props: FeedbackCardProps) {
   return (
-    <div className="flex max-md:flex-col border-b-2 pb-12 last:pb-0 border-primary/20 last:border-0 gap-8 font-myFont">
+    <div className="flex max-md:flex-col gap-8 font-myFont">
       <Image
         src={props.image}
         height={100}
