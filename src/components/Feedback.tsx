@@ -16,6 +16,7 @@ function Feedback() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.5, delay: index * 0.2 }}
+            className="last:border-0 last:pb-0 border-b-2 pb-12 border-primary/20"
           >
             <FeedbackCard
               image={item.image}
