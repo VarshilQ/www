@@ -1,6 +1,6 @@
 import LinkButton from "@/components/LinkButton";
 import { person } from "@/lib/config";
-import { RiArrowRightLine } from "@remixicon/react";
+import { RiArrowRightUpLine } from "@remixicon/react";
 
 export default function NotFound() {
   return (
@@ -17,7 +17,7 @@ export default function NotFound() {
       <LinkButton
         href="/"
         label={`Meet ${person.nickName}`}
-        icon={<RiArrowRightLine size={16} />}
+        icon={<RiArrowRightUpLine size={16} />}
       />
     </main>
   );

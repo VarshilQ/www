@@ -26,7 +26,7 @@ function Header() {
     <header
       className={cn(
         "w-full z-10 backdrop-blur-sm fixed top-0 inset-x-0 bg-background/65",
-        isMenuOpen && "bottom-0 backdrop-blur-2xl",
+        isMenuOpen && "bottom-0 backdrop-blur-2xl"
       )}
     >
       <nav className="w-full max-w-7xl max-md:px-6 mx-auto grid grid-cols-2 md:grid-cols-3 items-center h-20 font-myAltFont">
@@ -36,7 +36,7 @@ function Header() {
         </div>
 
         {/* Center: Logo */}
-        <Link href={"/"}>
+        <Link href={"/"} onClick={() => setIsMenuOpen(false)}>
           <Image
             height={"64"}
             width={"160"}
@@ -69,7 +69,7 @@ function Header() {
       </nav>
       {/* Menu */}
       {isMenuOpen && (
-        <ul className="w-full h-without-header flex justify-center flex-col max-w-7xl mx-auto text-center">
+        <ul className="w-full h-without-header justify-center-safe flex flex-col max-w-7xl mx-auto text-center">
           {navMenu.links.map(function (item, index) {
             return (
               <Link

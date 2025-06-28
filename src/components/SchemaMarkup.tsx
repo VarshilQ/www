@@ -1,3 +1,5 @@
+import { socialMediaLinks } from "@/lib/config";
+
 function SchemaMarkup() {
   const personData = {
     "@context": "https://schema.org",
@@ -6,10 +8,12 @@ function SchemaMarkup() {
     url: "https://varshilq.com",
     image: "https://varshilq.com/varshil.jpg",
     sameAs: [
-      "https://www.linkedin.com/in/VarshilQ",
-      "https://github.com/VarshilQ",
-      "https://x.com/VarshilQ",
-      "https://facebook.com/VarshilQ",
+      socialMediaLinks.facebook,
+      socialMediaLinks.github,
+      socialMediaLinks.linkedin,
+      socialMediaLinks.medium,
+      socialMediaLinks.reddit,
+      socialMediaLinks.twitter
     ],
     jobTitle: "Software Development Engineer",
     worksFor: {

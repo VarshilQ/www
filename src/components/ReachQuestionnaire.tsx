@@ -4,6 +4,9 @@ import React, { useState } from "react";
 import { useForm } from "react-hook-form";
 import { cn } from "@/lib/utils";
 import type { FormData } from "@/types/questionnaire";
+import { sendEmail } from "@/lib/sendMail";
+import { person } from "@/lib/config";
+import { mailTemplate } from "@/lib/mailTemplate";
 
 function ReachQuestionnaire() {
   const [step, setStep] = useState(1);
@@ -33,9 +36,14 @@ function ReachQuestionnaire() {
     return false;
   };
 
-  const onSubmit = (data: FormData) => {
-    alert(JSON.stringify(data, null, 2));
-  };
+  async function onSubmit(data: FormData) {
+    let result = await sendEmail({
+      to: [process.env.MAIL_RECEIVER!],
+      subject: `${data.name} wants to reach you via ${person.reachUrl}`,
+      html: mailTemplate(data),
+    });
+    console.log(result);
+  }
 
   const handleNext = () => {
     if (step < 3) setStep(step + 1);
@@ -52,10 +60,7 @@ function ReachQuestionnaire() {
         {[1, 2, 3].map((s, i) => (
           <React.Fragment key={s}>
             <div
-              className={cn(
-                "size-4",
-                step >= s ? "bg-primary" : "bg-muted"
-              )}
+              className={cn("size-4", step >= s ? "bg-primary" : "bg-muted")}
             ></div>
             {i < 2 && (
               <div

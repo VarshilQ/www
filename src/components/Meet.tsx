@@ -18,7 +18,8 @@ function Meet() {
         <Image
           className="w-full object-cover aspect-[4/2] md:grayscale-100 md:group-hover:grayscale-0 transition-all duration-1000 bg-foreground/20"
           src={person.image}
-          alt={person.nickName}
+          alt={person.name + " - Software Development Engineer"}
+          aria-label={"Image of " + person.name}
           height={200}
           width={600}
         />

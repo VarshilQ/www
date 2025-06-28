@@ -4,12 +4,14 @@ import {
   RiTwitterFill,
   RiLinkedinBoxFill,
   RiGithubFill,
+  RiRedditFill,
+  RiMediumFill,
 } from "@remixicon/react";
 import { socialMediaLinks } from "@/lib/config";
 
 function SocialLinks() {
   return (
-    <div className="flex items-center gap-12">
+    <div className="flex items-center gap-10">
       <a
         href={socialMediaLinks.twitter}
         target="_blank"
@@ -41,11 +43,21 @@ function SocialLinks() {
         />
       </a>
       <a
-        href={socialMediaLinks.facebook}
+        href={socialMediaLinks.reddit}
         target="_blank"
         rel="noopener noreferrer"
       >
-        <RiFacebookCircleFill
+        <RiRedditFill
+          size={16}
+          className="cursor-pointer hover:text-primary transition"
+        />
+      </a>
+      <a
+        href={socialMediaLinks.medium}
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        <RiMediumFill
           size={16}
           className="cursor-pointer hover:text-primary transition"
         />

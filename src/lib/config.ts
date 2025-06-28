@@ -2,6 +2,9 @@ export const person = {
   name: "Varshil J. Patel",
   nickName: "Varshil",
   website: "https://varshilq.com",
+  rootUrl: "varshilq.com/",
+  reachUrl: "varshilq.com/reach",
+  workUrl: "varshilq.com/work",
   image: "/about_varshil_img.png",
   email: "reach@varshilq.com",
   phone: "",
@@ -28,6 +31,8 @@ export const socialMediaLinks = {
   github: "https://github.com/VarshilQ",
   twitter: "https://twitter.com/VarshilQ",
   linkedin: "https://www.linkedin.com/in/VarshilQ/",
+  reddit: "https://reddit.com/user/VarshilQ/",
+  medium: "https://medium.com/@VarshilQ",
   facebook: "https://facebook.com/VarshilQ",
 };
 
@@ -42,7 +47,10 @@ export const heroContent = {
 
 export const experienceContent = {
   title: "Honored to work with visionary brands & teams",
-  image: "/work_varshil_img.png",
+  image: {
+    src: "/work_varshil_img.png",
+    alt: person.name + " while working",
+  },
   content: [
     "Varshil J. Patel is a Software Development Engineer specializing in full-stack development, system design, and cross-platform application development.",
     "With over 3 years of hands-on experience, including 6 months in the software industry, Varshil has built and contributed to multiple real-world projects—ranging from personal SaaS tools to industry-grade applications.",

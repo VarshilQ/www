@@ -1,5 +1,6 @@
 import LinkButton from "@/components/LinkButton";
 import { work } from "@/lib/work";
+import { IWorkDetails } from "@/types/work";
 import { RiArrowRightUpLine } from "@remixicon/react";
 import Image from "next/image";
 import React from "react";
@@ -40,7 +41,7 @@ async function WorkDetailsPage({ params }: { params: Params }) {
             <h1 className="font-myAltFont font-semibold text-4xl leading-tight">
               {currentWork.title}
             </h1>
-            <p className="font-myFont mt-1 opacity-80">
+            <p className="font-myFont mt-1 leading-relaxed opacity-80">
               {currentWork.description}
             </p>
             <div className="w-2/6 mt-6 h-1 bg-primary"></div>
@@ -54,7 +55,7 @@ async function WorkDetailsPage({ params }: { params: Params }) {
                 return (
                   <p
                     key={index}
-                    className="font-myFont opacity-80 leading-tight"
+                    className="font-myFont leading-relaxed opacity-80"
                   >
                     {item}
                   </p>

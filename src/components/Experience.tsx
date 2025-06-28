@@ -57,8 +57,8 @@ function Experience() {
           className="w-full gap-6 group mx-auto max-w-2xl flex max-sm:flex-col items-center"
         >
           <Image
-            src={experienceContent.image}
-            alt={"Image while working"}
+            src={experienceContent.image.src}
+            alt={experienceContent.image.alt}
             height={400}
             width={300}
             className="w-full sm:h-full flex-1 aspect-[4/3] sm:aspect-[3/4] object-cover transition-all duration-1000 md:grayscale-100 md:group-hover:grayscale-0"
