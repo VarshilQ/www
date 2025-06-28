@@ -37,7 +37,7 @@ function ReachQuestionnaire() {
   };
 
   async function onSubmit(data: FormData) {
-    let result = await sendMail({
+    const result = await sendMail({
       to: [process.env.NEXT_PUBLIC_MAIL_RECEIVER!],
       subject: `${data.name} wants to reach you via ${person.reachUrl}`,
       html: mailTemplate(data),
