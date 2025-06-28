@@ -4,7 +4,7 @@ import React, { useState } from "react";
 import { useForm } from "react-hook-form";
 import { cn } from "@/lib/utils";
 import type { FormData } from "@/types/questionnaire";
-import { sendEmail } from "@/lib/sendMail";
+import { sendMail } from "@/lib/sendMail";
 import { person } from "@/lib/config";
 import { mailTemplate } from "@/lib/mailTemplate";
 
@@ -37,8 +37,8 @@ function ReachQuestionnaire() {
   };
 
   async function onSubmit(data: FormData) {
-    let result = await sendEmail({
-      to: [process.env.MAIL_RECEIVER!],
+    let result = await sendMail({
+      to: [process.env.NEXT_PUBLIC_MAIL_RECEIVER!],
       subject: `${data.name} wants to reach you via ${person.reachUrl}`,
       html: mailTemplate(data),
     });

@@ -3,9 +3,9 @@ import { ISendMail } from "@/types/sendMail";
 /**
  * Send the mail using api
  * @param param0
- * @returns 
+ * @returns
  */
-export async function sendEmail({ to, subject, html }: ISendMail) {
+export async function sendMail({ to, subject, html }: ISendMail) {
   const res = await fetch("/api/mail", {
     method: "POST",
     body: JSON.stringify({
