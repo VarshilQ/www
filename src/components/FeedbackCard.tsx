@@ -14,7 +14,7 @@ function FeedbackCard(props: FeedbackCardProps) {
         src={props.image}
         height={100}
         width={100}
-        alt={props.author}
+        alt={`${props.author}'s feedback - "${props.quote}"`}
         className="rounded-full object-cover size-24 bg-foreground/20"
       />
       <div className="flex flex-col gap-4">
