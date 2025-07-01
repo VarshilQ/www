@@ -42,8 +42,7 @@ function ReachQuestionnaire() {
       subject: `${data.name} wants to reach you via ${person.reachUrl}`,
       html: mailTemplate(data),
     });
-    console.log(result);
-  }
+  } 
 
   const handleNext = () => {
     if (step < 3) setStep(step + 1);
