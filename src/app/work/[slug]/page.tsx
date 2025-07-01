@@ -27,7 +27,7 @@ async function WorkDetailsPage({ params }: { params: Params }) {
 
   return (
     <main>
-      <section className="w-full py-6 pb-20 max-w-7xl space-y-12 mx-auto max-md:px-6">
+      <section className="w-full py-6 pb-12 md:pb-20 max-w-7xl space-y-12 mx-auto max-md:px-6">
         <Image
           height={currentWork.image.height}
           width={currentWork.image.width}
@@ -37,7 +37,7 @@ async function WorkDetailsPage({ params }: { params: Params }) {
           className="w-full mx-auto bg-foreground/20 aspect-[16/9]"
         />
         <div className="w-full mx-auto gap-12 max-md:flex-col flex">
-          <div className="w-2/6">
+          <div className="md:w-2/6">
             <h1 className="font-myAltFont font-semibold text-4xl leading-tight">
               {currentWork.title}
             </h1>
@@ -46,8 +46,8 @@ async function WorkDetailsPage({ params }: { params: Params }) {
             </p>
             <div className="w-2/6 mt-6 h-1 bg-primary"></div>
           </div>
-          <div className="w-4/6">
-            <div className="space-y-6 mb-12">
+          <div className="md:w-4/6 space-y-12">
+            <div className="space-y-6">
               <h2 className="font-myAltFont text-2xl font-semibold">
                 Work Summary
               </h2>

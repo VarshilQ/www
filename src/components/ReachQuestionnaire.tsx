@@ -91,7 +91,7 @@ function ReachQuestionnaire() {
               {...register("name", { required: "Name is required" })}
             />
             {errors.name && (
-              <p className="text-red-500 text-sm">{errors.name.message}</p>
+              <p className="text-red-500 -mt-4 text-sm">{errors.name.message}</p>
             )}
           </>
         )}
@@ -114,7 +114,7 @@ function ReachQuestionnaire() {
               })}
             />
             {errors.email && (
-              <p className="text-red-500 text-sm">{errors.email.message}</p>
+              <p className="text-red-500 -mt-4 text-sm">{errors.email.message}</p>
             )}
           </>
         )}
@@ -130,7 +130,7 @@ function ReachQuestionnaire() {
               {...register("message", { required: "Message is required" })}
             />
             {errors.message && (
-              <p className="text-red-500 text-sm">{errors.message.message}</p>
+              <p className="text-red-500 -mt-4 text-sm">{errors.message.message}</p>
             )}
           </>
         )}

@@ -16,7 +16,7 @@ export const metadata: Metadata = {
 function WorkPage() {
   return (
     <main>
-      <section className="my-12 lg:my-20 w-full max-lg:px-6 max-w-7xl mx-auto">
+      <section className="m6-12 mb-6 lg:my-20 w-full max-lg:px-6 max-w-7xl mx-auto">
         <h1 className="text-[3rem] leading-none gap-2 flex flex-col text-center font-semibold font-myAltFont">
           <motion.span
             initial={{ opacity: 0, y: 50 }}
