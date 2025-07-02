@@ -23,7 +23,7 @@ function LinkButton({ href, label, className, icon, target }: LinkButtonProps) {
       <span className="font-sans font-medium h-full flex items-center justify-center w-fit shrink-0 pr-5">
         {label}
       </span>
-      <span className="text-base group-hover:bg-primary transition-colors duration-300 bg-foreground text-background rounded-full aspect-square full flex items-center justify-center">
+      <span className="text-base group-hover:bg-primary group-hover:text-foreground transition-colors duration-300 bg-foreground text-background rounded-full aspect-square full flex items-center justify-center">
         {icon && icon}
       </span>
     </Link>

@@ -9,7 +9,7 @@ export default function NotFound() {
         Nothing to see here!
       </h1>
       {/* 32 words paragraph */}
-      <p className="max-w-xl font-myFont text-foreground/80 mb-12 mt-4">
+      <p className="max-w-xl max-md:px-6 font-myFont text-foreground/80 mb-12 mt-4">
         It seems the page you are looking for does not exist. This could be due
         to a mistyped URL or the page being removed. Please check the URL or
         return to the homepage.
