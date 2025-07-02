@@ -16,6 +16,7 @@ function ReachQuestionnaire() {
     handleSubmit,
     watch,
     formState: { errors },
+    reset,
   } = useForm<FormData>({
     mode: "onTouched",
     defaultValues: {
@@ -38,11 +39,19 @@ function ReachQuestionnaire() {
 
   async function onSubmit(data: FormData) {
     const result = await sendMail({
-      to: [process.env.NEXT_PUBLIC_MAIL_RECEIVER!],
+      to: [process.env.NEXT_PUBLIC_MAIL_RECEIVER || ""],
       subject: `${data.name} wants to reach you via ${person.reachUrl}`,
       html: mailTemplate(data),
     });
-  } 
+
+    if (result?.success) {
+      alert("Your message was sent successfully!");
+      reset();
+      setStep(1);
+    } else {
+      alert("Failed to send your message. Please try again later.");
+    }
+  }
 
   const handleNext = () => {
     if (step < 3) setStep(step + 1);
@@ -90,7 +99,9 @@ function ReachQuestionnaire() {
               {...register("name", { required: "Name is required" })}
             />
             {errors.name && (
-              <p className="text-red-500 -mt-4 text-sm">{errors.name.message}</p>
+              <p className="text-red-500 -mt-4 text-sm">
+                {errors.name.message}
+              </p>
             )}
           </>
         )}
@@ -113,7 +124,9 @@ function ReachQuestionnaire() {
               })}
             />
             {errors.email && (
-              <p className="text-red-500 -mt-4 text-sm">{errors.email.message}</p>
+              <p className="text-red-500 -mt-4 text-sm">
+                {errors.email.message}
+              </p>
             )}
           </>
         )}
@@ -129,7 +142,9 @@ function ReachQuestionnaire() {
               {...register("message", { required: "Message is required" })}
             />
             {errors.message && (
-              <p className="text-red-500 -mt-4 text-sm">{errors.message.message}</p>
+              <p className="text-red-500 -mt-4 text-sm">
+                {errors.message.message}
+              </p>
             )}
           </>
         )}
