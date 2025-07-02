@@ -79,7 +79,7 @@ export const meetMeContent = {
 };
 
 export const feedbackContent = {
-  title: "Client's feedback is important for Varshil",
+  title: "The client's feedback is important for Varshil",
   feedbacks: [
     {
       image: "/feedbacks/rakesh_prajapati.jpg",
