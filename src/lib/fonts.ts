@@ -1,9 +1,45 @@
-import { Inter } from "next/font/google";
 import localFont from "next/font/local";
 
-export const sans = Inter({
+// export const sans = Inter({
+//   variable: "--font-sans",
+//   subsets: ["latin"],
+// });
+
+export const sans = localFont({
   variable: "--font-sans",
-  subsets: ["latin"],
+  display: "swap",
+  src: [
+    {
+      path: "../assets/fonts/SKPayidar-Regular.woff2",
+      weight: "400",
+      style: "normal",
+    },
+    {
+      path: "../assets/fonts/SKPayidar-Medium.woff2",
+      weight: "500",
+      style: "normal",
+    },
+    {
+      path: "../assets/fonts/SKPayidar-Bold.woff2",
+      weight: "700",
+      style: "normal",
+    },
+    {
+      path: "../assets/fonts/SKPayidar-Italic.woff2",
+      weight: "400",
+      style: "italic",
+    },
+    {
+      path: "../assets/fonts/SKPayidar-MediumItalic.woff2",
+      weight: "500",
+      style: "italic",
+    },
+    {
+      path: "../assets/fonts/SKPayidar-BoldItalic.woff2",
+      weight: "700",
+      style: "italic",
+    },
+  ],
 });
 
 export const myFont = localFont({

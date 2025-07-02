@@ -19,7 +19,7 @@ function Footer() {
         </Link>
       </div>
       <div className="w-full mt-16 mb-8 gap-12 md:gap-8 flex flex-col items-start justify-between max-w-7xl max-md:px-6 mx-auto">
-        <div className="w-full flex max-md:flex-col items-start justify-between gap-y-20">
+        <div className="w-full flex max-md:flex-col items-start justify-between gap-y-16">
           <div className="flex flex-col gap-8 items-start max-w-2xl w-full">
             <Link href={"/"}>
               <Image
@@ -30,7 +30,7 @@ function Footer() {
               />
             </Link>
             <p className="">{footerContent.description}</p>
-            <ul className="flex items-center gap-6">
+            <ul className="flex items-center max-md:flex-col gap-6">
               {footerContent.links.map(function (link, index) {
                 return (
                   <Link
