@@ -3,7 +3,7 @@ import { person } from "./config";
 export const metaInfo = {
   home: {
     title: `${person.name} | Software Engineer & Developer Portfolio`,
-    description: `Welcome to ${person.name}'s official portfolio. Discover ${person.nickName}'s latest software development projects, engineering insights, and technical updates. Your go-to resource for cutting-edge software solutions.`,
+    description: `Welcome to ${person.name}'s official portfolio. Discover ${person.nickName.toLowerCase()}'s latest software development projects, engineering insights, and technical updates. Your go-to resource for cutting-edge software solutions.`,
     keywords: [
       person.name,
       person.nickName,
