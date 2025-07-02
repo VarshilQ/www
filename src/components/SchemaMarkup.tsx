@@ -1,19 +1,19 @@
-import { socialMediaLinks } from "@/lib/config";
+import { person, socialMediaLinks } from "@/lib/config";
 
 function SchemaMarkup() {
   const personData = {
     "@context": "https://schema.org",
     "@type": "Person",
     name: "Varshil J. Patel",
-    url: "https://varshilq.com",
-    image: "https://varshilq.com/varshil.jpg",
+    url: "https://varshilp.com",
+    image: "https://varshilp.com/varshil.jpg",
     sameAs: [
       socialMediaLinks.facebook,
       socialMediaLinks.github,
       socialMediaLinks.linkedin,
       socialMediaLinks.medium,
       socialMediaLinks.reddit,
-      socialMediaLinks.twitter
+      socialMediaLinks.twitter,
     ],
     jobTitle: "Software Development Engineer",
     worksFor: {
@@ -22,7 +22,7 @@ function SchemaMarkup() {
     },
     description:
       "Varshil J. Patel is a software development engineer specializing in full-stack development, app design, and modern web technologies including React, Node.js, Rust, and Tauri.",
-    email: "mailto:reach@varshilq.com",
+    email: `mailto:${person.email}`,
     knowsAbout: [
       "Full-Stack Development",
       "React",
@@ -40,19 +40,19 @@ function SchemaMarkup() {
     "@context": "https://schema.org",
     "@type": "WebSite",
     name: "Varshil J. Patel Portfolio",
-    url: "https://varshilq.com",
+    url: "https://varshilp.com",
     description:
       "Portfolio website of Varshil J. Patel — a full-stack developer building modern, scalable software using React, Node.js, Rust, and cross-platform technologies.",
     inLanguage: "en",
     publisher: {
       "@type": "Person",
       name: "Varshil J. Patel",
-      url: "https://varshilq.com",
+      url: "https://varshilp.com",
     },
     mainEntity: [
-      { "@type": "WebPage", name: "Information", url: "https://varshilq.com" },
-      { "@type": "WebPage", name: "Work", url: "https://varshilq.com/work" },
-      { "@type": "WebPage", name: "Reach", url: "https://varshilq.com/reach" },
+      { "@type": "WebPage", name: "Information", url: "https://varshilp.com" },
+      { "@type": "WebPage", name: "Work", url: "https://varshilp.com/work" },
+      { "@type": "WebPage", name: "Reach", url: "https://varshilp.com/reach" },
     ],
   };
 
@@ -60,11 +60,11 @@ function SchemaMarkup() {
   //   "@context": "https://schema.org",
   //   "@type": "WebPage",
   //   name: "Information",
-  //   url: "https://varshilq.com",
+  //   url: "https://varshilp.com",
   //   description: "Homepage of Varshil J. Patel’s portfolio.",
   //   isPartOf: {
   //     "@type": "WebSite",
-  //     url: "https://varshilq.com",
+  //     url: "https://varshilp.com",
   //   },
   //   author: {
   //     "@type": "Person",
@@ -79,20 +79,20 @@ function SchemaMarkup() {
       {
         "@type": "ListItem",
         position: 1,
-        name: "Home",
-        item: "https://varshilq.com",
+        name: "Information",
+        item: "https://varshilp.com",
       },
       {
         "@type": "ListItem",
         position: 2,
         name: "Work",
-        item: "https://varshilq.com/work",
+        item: "https://varshilp.com/work",
       },
       {
         "@type": "ListItem",
         position: 3,
         name: "Reach",
-        item: "https://varshilq.com/reach",
+        item: "https://varshilp.com/reach",
       },
     ],
   };
@@ -102,7 +102,7 @@ function SchemaMarkup() {
     "@type": "ContactPoint",
     // telephone: "+91-XXXXXXXXXX",
     contactType: "Customer Support",
-    email: "mailto:reach@varshilq.com",
+    email: `mailto:${person.email}`,
     availableLanguage: ["English", "Gujarati", "Hindi"],
   };
 

@@ -3,7 +3,7 @@ User-agent: *
 Allow: /
 
 # Host
-Host: https://varshilq.com
+Host: https://varshilp.com
 
 # Sitemaps
-Sitemap: https://varshilq.com/sitemap.xml
+Sitemap: https://varshilp.com/sitemap.xml

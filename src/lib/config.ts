@@ -1,12 +1,12 @@
 export const person = {
   name: "Varshil J. Patel",
   nickName: "Varshil",
-  website: "https://varshilq.com",
-  rootUrl: "varshilq.com/",
-  reachUrl: "varshilq.com/reach",
-  workUrl: "varshilq.com/work",
+  website: "https://varshilp.com",
+  rootUrl: "varshilp.com/",
+  reachUrl: "varshilp.com/reach",
+  workUrl: "varshilp.com/work",
   image: "/about_varshil_img.png",
-  email: "reach@varshilq.com",
+  email: "varshil.dev@gmail.com",
   phone: "",
 };
 
