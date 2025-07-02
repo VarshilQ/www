@@ -6,6 +6,7 @@ import { metaInfo } from "@/lib/meta";
 import { myAltFont, myFont, sans } from "@/lib/fonts";
 import SchemaMarkup from "@/components/SchemaMarkup";
 import { person } from "@/lib/config";
+import { Analytics } from "@vercel/analytics/next";
 
 export const metadata: Metadata = {
   title: metaInfo.home.title,
@@ -50,6 +51,7 @@ export default function RootLayout({
         {children}
         {/* Footer section */}
         <Footer />
+        <Analytics/>
       </body>
     </html>
   );
